@@ -118,10 +118,10 @@ Make sure to change [SERVER_IP] and [PHP_VERSION]
 Save and paste the other commands
 
 ``` sh
-systemctl reload nginx
-cd /var/www/html/
-rm index.nginx-debian.html
-wget -O shopware.zip https://releases.shopware.com/sw6/install_6.0.0_ea1_1563354247.zip 
-unzip shopware.zip
+systemctl reload nginx ;\
+cd /var/www/html/ ;\
+rm index.nginx-debian.html ;\
+wget -O shopware.zip https://releases.shopware.com/sw6/install_6.0.0_ea1_1563354247.zip  ;\
+unzip shopware.zip ;\
 rm shopware.zip
 ```
