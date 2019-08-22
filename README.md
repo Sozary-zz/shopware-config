@@ -11,13 +11,7 @@ rm -rf /etc/apache2; \
 apt install -y nginx ;\
 apt-get install unzip ;\
 ufw allow 'Nginx HTTP' ;\
-> /etc/nginx/sites-enabled/default ;\
-nano /etc/nginx/sites-enabled/default 
-```
-
-Then paste
-
-``` markdown
+tee /etc/nginx/sites-enabled/default << END
 ##
 # You should look at the following URL's in order to grasp a solid understanding
 # of Nginx configuration files in order to fully unleash the power of Nginx.
@@ -62,7 +56,7 @@ server {
 
 	# Add index.php to the list if you are using PHP
 
-	server_name [SERVER_IP];
+	server_name _;
 
     index shopware.php index.php;
 
@@ -76,7 +70,7 @@ server {
 		include snippets/fastcgi-php.conf;
 	#
 	#	# With php-fpm (or other unix sockets):
-		fastcgi_pass unix:/var/run/php/php[PHP_VERSION]-fpm.sock;
+		fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
 	#	# With php-cgi (or other tcp sockets):
 #		fastcgi_pass 127.0.0.1:9000;
 	}
@@ -111,7 +105,7 @@ server {
 #	location / {
 #		try_files $uri $uri/ =404;
 #	}
-#}
+END ;\
 ```
 
 Make sure to change [SERVER_IP] and [PHP_VERSION]
