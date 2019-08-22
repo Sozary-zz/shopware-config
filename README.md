@@ -4,13 +4,15 @@ Quick start with shopware
 Simple past all those commands in your terminal the first time you access your server.
 
 ``` sh
-apt update
-apt install -y php-common php-cli php-fpm php-mysql php
-apt install -y nginx 
-apt-get install unzip
-ufw allow 'Nginx HTTP'
-> /etc/nginx/sites-enabled/default 
-nano /etc/nginx/sites-enabled/default 
+apt update \
+apt install -y php-common php-cli php-fpm php-mysql php \
+service apache2 stop \
+rm -rf /etc/apache2 \
+apt install -y nginx \
+apt-get install unzip \
+ufw allow 'Nginx HTTP' \
+> /etc/nginx/sites-enabled/default \
+nano /etc/nginx/sites-enabled/default \
 ```
 
 Then paste
