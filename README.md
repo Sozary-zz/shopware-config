@@ -15,6 +15,8 @@ ufw allow 'Nginx HTTP' ;\
 nano /etc/nginx/sites-enabled/default
 ```
 
+Paste that and make sure to change both [SERVER_IP] and [PHP_VERSION]
+
 ```
 ##
 # You should look at the following URL's in order to grasp a solid understanding
@@ -111,7 +113,7 @@ server {
 #	}
 ```
 
-Make sure to change [SERVER_IP] and [PHP_VERSION]
+
 Save and paste the other commands
 
 ``` sh
