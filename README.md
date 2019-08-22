@@ -130,5 +130,5 @@ chmod 777 public/ ;\
 chmod 777 config/jwt/ ;\
 chmod 777 public/recovery/install/data ;\
 apt-get -y install php-xml php-curl php-mbstring php-zip php-intl;\
-systemctl reload nginx ;\
+systemctl reload nginx 
 ```
