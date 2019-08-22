@@ -129,8 +129,23 @@ chmod 777 var/queue/ ;\
 chmod 777 public/ ;\
 chmod 777 config/jwt/ ;\
 chmod 777 public/recovery/install/data ;\
-apt-get -y install php-xml php-curl php-mbstring php-zip php-intl ;\
+apt-get -y install php-xml php-curl php-mbstring php-zip php-intl mysql-server ;\
 systemctl reload nginx 
 ```
 
-Start to use your shop :dollar:
+After that, let's configure a mysql database
+
+```
+mysql -u root -p
+```
+
+Type a password
+Then write the following in the mysql console
+
+``` mysql
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'asdf';
+CREATE DATABASE db1;
+```
+During the installation, when it'll be ask for username and password, just write `admin` and `asdf`
+
+You can start to use your shop :dollar:
