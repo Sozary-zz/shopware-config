@@ -132,3 +132,5 @@ chmod 777 public/recovery/install/data ;\
 apt-get -y install php-xml php-curl php-mbstring php-zip php-intl;\
 systemctl reload nginx 
 ```
+
+Start to use your shop :dollar:
