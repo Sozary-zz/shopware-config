@@ -5,7 +5,6 @@ Simple past all those commands in your terminal the first time you access your s
 
 ``` sh
 apt update
-apt install -y php  
 apt install -y php-common php-cli php-fpm php-mysql php
 apt install -y nginx 
 apt-get install unzip
