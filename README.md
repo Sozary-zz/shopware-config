@@ -1,4 +1,4 @@
-# shopware-config
+# shopware 6 config
 Quick start with shopware
 
 Simple past all those commands in your terminal the first time you access your server.
